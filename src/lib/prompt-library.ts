@@ -3,7 +3,9 @@ export type EmailTypeId =
   | "apology"
   | "meeting-request"
   | "thank-you"
-  | "business-inquiry";
+  | "business-inquiry"
+  | "social-media-post"
+  | "blog-post";
 
 export type Tone = "Formal" | "Friendly" | "Direct" | "Warm" | "Persuasive";
 export type Length = "Short" | "Medium" | "Long";
@@ -20,6 +22,8 @@ export const EMAIL_TYPES: EmailType[] = [
   { id: "meeting-request", label: "Meeting Request", blurb: "Propose a time with a clear agenda." },
   { id: "thank-you", label: "Thank You", blurb: "Express specific, sincere gratitude." },
   { id: "business-inquiry", label: "Business Inquiry", blurb: "Ask about services, pricing, or partnership." },
+  { id: "social-media-post", label: "Social Media Post", blurb: "A short, scroll-stopping post with a clear hook." },
+  { id: "blog-post", label: "Blog Post", blurb: "A structured article with headings and a closing takeaway." },
 ];
 
 export interface LibraryPrompt {
@@ -143,6 +147,50 @@ export const PROMPT_LIBRARY: LibraryPrompt[] = [
       "Brief intro to my company; why their audience and ours align; a concrete first collaboration idea; what each side contributes; ask for a call.",
     tone: "Persuasive",
     length: "Medium",
+  },
+  {
+    id: "sm-1",
+    type: "social-media-post",
+    title: "Company milestone announcement",
+    description: "Celebratory LinkedIn-style post with a hook and a credit line.",
+    purpose: "Announce a company milestone and thank the people who made it possible.",
+    details:
+      "The milestone and the number behind it; a one-line hook to open; who to credit; what it means for customers; a closing question or call to action; 3-5 relevant hashtags.",
+    tone: "Warm",
+    length: "Short",
+  },
+  {
+    id: "sm-2",
+    type: "social-media-post",
+    title: "Product launch teaser",
+    description: "Punchy launch post that drives clicks.",
+    purpose: "Tease a new product or feature and drive traffic to the launch page.",
+    details:
+      "Product name and the single problem it solves; one concrete benefit; launch date; link placeholder; short line breaks for readability; clear call to action and hashtags.",
+    tone: "Persuasive",
+    length: "Short",
+  },
+  {
+    id: "bp-1",
+    type: "blog-post",
+    title: "How-to guide",
+    description: "Step-by-step article with headings and a takeaway.",
+    purpose: "Write a practical how-to article that walks readers through a process.",
+    details:
+      "Topic and target reader; the outcome they'll achieve; 4-6 numbered steps; common pitfalls to avoid; a short conclusion with next steps; suggested title and intro hook.",
+    tone: "Friendly",
+    length: "Long",
+  },
+  {
+    id: "bp-2",
+    type: "blog-post",
+    title: "Thought leadership opinion piece",
+    description: "Argues a clear position backed by reasoning.",
+    purpose: "Publish an opinion piece arguing a clear position on an industry trend.",
+    details:
+      "The trend and my position on it; two or three supporting arguments; one counter-argument addressed honestly; a concrete example; closing call to reflection.",
+    tone: "Direct",
+    length: "Long",
   },
 ];
 
