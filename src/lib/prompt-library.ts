@@ -22,6 +22,8 @@ export const EMAIL_TYPES: EmailType[] = [
   { id: "meeting-request", label: "Meeting Request", blurb: "Propose a time with a clear agenda." },
   { id: "thank-you", label: "Thank You", blurb: "Express specific, sincere gratitude." },
   { id: "business-inquiry", label: "Business Inquiry", blurb: "Ask about services, pricing, or partnership." },
+  { id: "social-media-post", label: "Social Media Post", blurb: "A short, scroll-stopping post with a clear hook." },
+  { id: "blog-post", label: "Blog Post", blurb: "A structured article with headings and a closing takeaway." },
 ];
 
 export interface LibraryPrompt {
