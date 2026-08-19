@@ -158,5 +158,35 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(circle at 15% 0%, color-mix(in oklab, var(--gold) 12%, transparent), transparent 45%),
+      radial-gradient(circle at 90% 5%, color-mix(in oklab, var(--seal) 7%, transparent), transparent 40%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
   }
 }
+
+@utility letterpress {
+  background-color: var(--card);
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 0 color-mix(in oklab, var(--ink) 4%, transparent),
+    0 18px 40px -28px color-mix(in oklab, var(--ink) 45%, transparent);
+}
+
+@utility rule-gold {
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--gold) 90%, transparent),
+    color-mix(in oklab, var(--gold) 15%, transparent)
+  );
+}
+
