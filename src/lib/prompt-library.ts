@@ -3,7 +3,9 @@ export type EmailTypeId =
   | "apology"
   | "meeting-request"
   | "thank-you"
-  | "business-inquiry";
+  | "business-inquiry"
+  | "social-media-post"
+  | "blog-post";
 
 export type Tone = "Formal" | "Friendly" | "Direct" | "Warm" | "Persuasive";
 export type Length = "Short" | "Medium" | "Long";
